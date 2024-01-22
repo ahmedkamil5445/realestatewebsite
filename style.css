@@ -1,0 +1,591 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+body  {
+    background-color: rgb(0, 0, 0);
+    margin: 0px 200px 0px;
+    color: white;
+    font-weight: 'Mada Regular';
+    
+}
+header{
+    color: white;
+    display: flex;
+   justify-content: space-between;
+   margin: 50px 0px;
+   
+}
+header h2 {
+    font-size: 28px;
+    font-weight: 350;
+}
+.header ul{
+    list-style: none;
+    display: flex;
+    font-size: 22px;
+    justify-content: space-between;
+   gap: 50px;
+   align-items: center;
+
+}
+.header ul li {
+    list-style-type: none;
+    
+}
+.header ul li.button {
+    background-color: white;
+    
+    border-radius: 10px; /* Adjust the value for rounded edges */
+    padding: 15px; /* Adjust the padding as needed */
+    color: black;
+    cursor: pointer;
+}
+/* section */
+
+.sec1 {
+    background-image: url(./img/kimon-maritz-mQiZnKwGXW0-unsplash.jpg); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    height: 600px; /* Set the desired height of your section */
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    
+}
+.sec1 h1 {
+    align-items: center;
+    padding-top: 60px;
+    opacity: 1;
+    font-size: 100px;
+
+}
+.sec1 p {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.sec1div1{
+    background-color: white;
+    display: inline-flex;
+    text-decoration: none;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    margin-top: 90px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.sec1div1 li {
+    padding: 20px 50px;
+    font-size: 18px;
+    
+    
+}
+.sec1div1 li:nth-child(1)
+{
+    background-color: black;
+    padding: 15px 40px;
+    color: white;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 10px;
+    
+}
+.sec1div2 {
+    display: inline-flex;
+    justify-content: space-between; /* Adjust as needed for spacing between items */
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.form1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap as needed for spacing between items */
+    align-items: center; /* Center vertically within the container */
+   
+
+}
+
+.form1 li {
+    list-style-type: none;
+    padding: 50px;
+    font-size: 30px;
+    
+}
+
+.form1 li:not(:last-child) {
+    position: relative;
+}
+
+.form1 li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 40%; /* Adjust the height of the colored line as needed */
+    border-right: 2px solid #BDBDBD;
+}
+
+.flex-container {
+    display: flex;
+    /* gap: 20px;  */
+}
+.form1 select {
+    appearance: none; /* Remove default arrow in Firefox */
+    -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
+    background-color: #ffffff; /* Set background color as needed */
+    border: none; /* Remove border */
+    width: 100%; /* Make the dropdown full-width */
+    box-sizing: border-box; /* Include padding and border in the total width */
+    align-items: center;
+    font-size: 20px;
+    color: #828282;
+}
+.form1 li:last-child input[type="submit"] {
+    background-color: #000000; /* Black background color */
+    color: #ffffff; /* White text color */
+    padding: 25px 50px; /* Adjust padding as needed for the button */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add pointer cursor on hover */
+    font-size: 16px; /* Adjust font size as needed */
+    border-radius: 10px;
+}
+.sec2
+{
+    margin-top: 240px;
+    display: flex;
+    
+}
+.sec2 img {
+    max-width: 447px;
+    height: 565px;
+    border-radius: 10px;
+    
+}
+.sec2div1{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 25px;
+
+}
+.sec2div2 li {
+    list-style-type: none;
+}
+.sec2div2 {
+    display: flex;
+    padding-top: 30px;
+    flex-direction: row;
+    gap: 100px;
+}
+.sec3{
+    margin-top: 50px;
+    font-size: 25px;
+    
+    
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    
+}
+.grid-container div img {
+    justify-content: space-between;
+    
+}
+    
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.item {
+    width: 615px;
+    height: 378px;
+    object-fit: cover;
+    border-radius: 40px;
+    padding-left: 0px;
+}
+
+.item1 {
+    grid-row: span 2;
+    width: 700px;
+    height: 796px;
+    
+}
+
+button {
+    margin-top: 10px;
+    font-size: 30px;
+    padding: 15px 20px;
+    border-radius: 10px;
+  
+
+}
+.slider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button {
+display: flex;
+gap: 15px; /* Adjust the space between buttons as needed */
+}
+.button1{
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border: 1px solid white;
+}
+.overlay {
+    position: absolute;
+    display: flex; 
+    color: #000000;
+    padding: 20px;
+    pointer-events: none;
+}
+
+.top {
+position: absolute;
+top:83%;
+left: 3.5%;
+z-index: 10;
+width: 600px;
+
+
+}
+.top ,.topside , .bottomside{
+background-color: white; /* Set the background color to white */
+border-radius: 20px; /* Set the border radius as needed */
+color: #000000;
+pointer-events: none;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+.topside{
+position: absolute;
+top: 30%;
+left: 63%;
+width: 400px;
+}
+.bottomside{
+position: absolute;
+top: 83%;
+left: 63%;
+width: 400px;
+}
+
+.top div h5 , .topside div h5 ,.bottomside div h5{
+padding: 0px;
+margin-top: -15px;
+color: #828282;
+}
+.price{
+background-color: #000000;
+color: white;
+padding: 10px 20px;
+border-radius: 10px;
+}
+.sec3head{
+    color: white;
+    margin-top: 160px;
+    font-size: 48px;
+    margin-bottom: 80px;
+    
+}
+.my-slider-container {
+    position: relative;
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.my-slider {
+    display: flex;
+    
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+
+}
+
+
+.my-slide {
+min-width: calc(30% - 30px); /* Take 100% width and subtract 10px for the right margin */
+overflow: hidden;
+position: relative;
+margin-right: 30px; /* Set the right margin to create space between images */
+}
+
+
+.my-slide img {
+    width: 100%; 
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+.my-text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.my-slide:hover .my-text-overlay {
+    opacity: 1;
+}
+.sec5{
+    background-color: white;
+    color: #000000;
+    margin: 100px 20px;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: 30px;
+    border-radius: 20px;
+
+}
+.sec5div1 {
+    text-align:center ;
+    
+}
+.sec5div1 > * {
+   padding-top: 20px;
+}
+.sec5div1 p {
+    font-size: medium;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+#subscriptionForm{
+    background-color: #000000;
+    display: inline-flex;
+    flex-direction: row;
+    padding: 20px;
+    border-radius: 10px;
+    width: 623px;
+    justify-content: space-between;
+    height: 72px;
+    align-items: center;
+
+
+
+}
+#email{
+    background-color: #000000;
+    color: #000000;
+    border: 1px solid #000000;
+    width: 500px;
+    
+}
+#email::placeholder {
+    color:#E0E0E0;
+    
+}#subscriptionForm input[type="submit"] {
+    background-color: #ffffff;
+    color: #000000;
+    /* padding: 10px 20px; */
+    width: 146px;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+footer li {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 18px;
+    color: #BDBDBD;
+}
+footer div li:first-child {
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 50px;
+   
+}
+footer div li:not(:first-child) {
+    margin-bottom: 40px;
+}
+
+footer div:first-child h1{
+    margin-bottom: 40px;
+}
+footer div:first-child p {
+   font-size: 18px;
+   color: #BDBDBD;
+   display: flex;
+   flex-direction: row;
+   line-height: 2.5;
+}
+i {
+    font-size: 35px;
+    
+}
+i:not(:first-child){
+    padding-left: 40px;
+}
+.icon a:not(:first-child){
+    padding-left: 40px;
+}
+footer > div:first-child{
+    margin-right: 120px; /* Adjust the space between the divs */
+}
+
+footer > div:last-child {
+    margin-right: 0px; /* Remove right margin for the last div */
+}
+#gallery {
+    position: relative;
+    width: 1393px;
+    height: 675px;
+    background-color: #000000;
+    overflow: visible;
+  }
+
+  .person {
+    position: absolute;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .person1 {
+    width: 82px;
+    height: 82px;
+    top: 17%;
+    left: 0%;
+  }
+
+  .person2 {
+    width: 68px;
+    height: 68px;
+    top: 40%;
+    left: 15%;
+  }
+
+  .person3 {
+    width: 149px;
+    height: 149px;
+    top: 75%;
+    left: 4%;
+  }
+
+  .person4 {
+    width: 165px;
+    height: 165px;
+    top: 66%;
+    left: 93%;
+    transform: translate(-50%, -50%); /* Center the person initially */
+  }
+
+  .person5 {
+    width: 83px;
+    height: 83px;
+    top: 27%;
+    left: 92%;
+  }
+
+  .person6 {
+    width: 117px;
+    height: 117px;
+    top: 47%;
+    left: 80%;
+  }
+
+  .person7 {
+    width: 70px;
+    height: 70px;
+    top: 83%;
+    left: 83%;
+  }
+
+  .centered {
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 1;
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+  }
+
+  .person-info {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 48.40%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    padding-top: 10px;
+    border-radius: 10px;
+    font-size: 22px;
+
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+    .person-info p:nth-child(2) {
+      margin-bottom: 40px;
+      
+
+  }
+  .person-info p:nth-child(3) {
+    
+        color:#E0E0E0 ;
+  
+    }
+    
+
+
+
+  .sec4 {
+    margin-top: 200px;
+  }
+  .galleryhead {
+    position: absolute;
+    top: -1%;
+    left: 27%;
+    font-size: 33px;
+  }

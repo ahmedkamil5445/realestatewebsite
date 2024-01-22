@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Bubbles</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    #gallery {
+      position: relative;
+      width: 1393px;
+      height: 880px;
+      background-color: #f1eded;
+      overflow: hidden;
+    }
+
+    .person {
+      position: absolute;
+      background-size: cover;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+    }
+
+    .person1 {
+      width: 82px;
+      height: 82px;
+      top: 30%;
+      left: 1%;
+    }
+
+    .person2 {
+      width: 68px;
+      height: 68px;
+      top: 60%;
+      left: 40%;
+    }
+
+    .person3 {
+      width: 149px;
+      height: 149px;
+      top: 30%;
+      left: 70%;
+    }
+
+    .person4 {
+      width: 165px;
+      height: 165px;
+      top: 80%;
+      left: 80%;
+      transform: translate(-50%, -50%); /* Center the person initially */
+    }
+
+    .person5 {
+      width: 83px;
+      height: 83px;
+      top: 50%;
+      left: 50%;
+    }
+
+    .person6 {
+      width: 117px;
+      height: 117px;
+      top: 90%;
+      left: 10%;
+    }
+
+    .person7 {
+      width: 70px;
+      height: 70px;
+      top: 10%;
+      left: 60%;
+    }
+
+    .centered {
+      transform: translate(-50%, -50%) scale(1);
+      z-index: 1;
+      width: 120px; /* Adjust the size as needed */
+      height: 120px; /* Adjust the size as needed */
+    }
+
+    .person-info {
+      display: none;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      background-color: #000000;
+      padding: 10px;
+      border-radius: 5px;
+      padding-top: 10px;
+      border-radius: 10px;
+
+
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    
+      .person-info p:nth-child(2) {
+        margin-bottom: 40px;
+  
+    }
+  </style>
+</head>
+<body>
+  <div class="sec4">
+    <div id="gallery">
+      <div class="person person4 centered" style="background-image: url('./img/img4.jpg'); " onclick="showPersonInfo('Ripon Ahmed', 'Temperley, Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book')"></div>
+      <div class="person person1" style="background-image: url('./img/img1.jpg'); " onclick="showPersonInfo('Person 1', 'Description for Person 1', 'Additional information for Person 1')"></div>
+      <div class="person person2" style="background-image: url('./img/img2.jpg'); " onclick="showPersonInfo('Person 2', 'Description for Person 2', 'Additional information for Person 2')"></div>
+      <div class="person person3" style="background-image: url('./img/img3.jpg'); " onclick="showPersonInfo('Person 3', 'Description for Person 3', 'Additional information for Person 3')"></div>
+      <div class="person person5" style="background-image: url('./img/img5.jpg'); " onclick="showPersonInfo('Person 5', 'Description for Person 5', 'Additional information for Person 5')"></div>
+      <div class="person person6" style="background-image: url('./img/img6.jpg');" onclick="showPersonInfo('Person 6', 'Description for Person 6', 'Additional information for Person 6')"></div>
+      <div class="person person7" style="background-image: url('./img/img7.jpg'); " onclick="showPersonInfo('Person 7', 'Description for Person 7', 'Additional information for Person 7')"></div>
+      <div class="person-info" id="personInfo"></div>
+    </div>
+  </div>
+
+  <script>
+    let centeredPerson = document.querySelector('.centered');
+
+    // Simulate click on Person 4 during page load
+    window.onload = function () {
+      simulateClick(centeredPerson);
+    };
+
+    function simulateClick(element) {
+      const event = new Event('click');
+      element.dispatchEvent(event);
+    }
+
+    function showPersonInfo(name, description, additionalInfo) {
+      const personInfoDiv = document.getElementById('personInfo');
+      personInfoDiv.innerHTML = `<h2>${name}</h2><p>${description}</p><p>${additionalInfo}</p>`;
+      personInfoDiv.style.display = 'block';
+
+      const gallery = document.getElementById('gallery');
+      const centerX = gallery.offsetWidth / 2;
+      const centerY = gallery.offsetHeight / 2;
+
+      const clickedBubble = event.target;
+
+      if (centeredPerson && centeredPerson !== clickedBubble) {
+        // If a person is already centered, reset its position and size
+        centeredPerson.classList.remove('centered');
+        centeredPerson.style.transform = 'translate(-50%, -50%)';
+      }
+
+      centeredPerson = clickedBubble;
+      centeredPerson.classList.add('centered');
+
+      const bubbleX = centeredPerson.offsetLeft + centeredPerson.offsetWidth / 2;
+      const bubbleY = centeredPerson.offsetTop + centeredPerson.offsetHeight / 2;
+
+      const deltaX = centerX - bubbleX;
+      const deltaY = centerY - bubbleY;
+
+      centeredPerson.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+   
+   
+    
+</head>
+<body>
+    <main>
+        <header >
+            
+            <h2>Dudeshape</h2>
+            <nav class="header">
+                <ul class="header">
+                    <li>Home</li>
+                    <li>Properties</li>
+                    <li>About Us</li>
+                    <li>Login</li>
+                    <li class="button">Get Started</li>
+                </ul>
+            </nav>
+        </header>
+        <section class="sec1">
+            
+            <h1>Easy way to find a<br>perfect property</h1>
+            <p> we provide a complete service for the sale,purchase <br> or rental of real estate</p>
+            <div class="sec1div1">
+                <li>Buy</li>
+                <li>Sell</li>
+                <li>Rent</li>
+            </div>
+            <br>
+            <div class="sec1div2">
+                <form action="" class="form1">
+                    <div class="flex-container">
+                        <li>
+                            <label for="location">Locations</label><br>
+                            <select id="location" name="location">
+                                <option value="" disabled selected>Select your city</option>
+                                <option value="city1">City 1</option>
+                                <option value="city2">City 2</option>
+                                <option value="city3">City 3</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="propertytype">Property Type</label><br>
+                            <select id="propertytype" name="propertytype">
+                                <option value="" disabled selected>Choose your property type</option>
+                                <option value="city1">Condo</option>
+                                <option value="city2">Studio</option>
+                                <option value="city3">Apartment</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="range">Rent Range</label><br>
+                            <select id="range" name="range">
+                                <option value="" disabled selected>Choose a range</option>
+                                <option value="city1">0-10000$</option>
+                                <option value="city2">10000-20000$</option>
+                                <option value="city3">20000+</option>
+                            </select>
+                        </li>
+                    </div>
+                    <li>
+                        <input type="submit" value="Search">
+                    </li>
+                </form>
+            </div>
+        </section>
+        <section class="sec2">
+            <img src="./img/simone-hutsch-_wpce-AsLxk-unsplash.jpg" alt="">
+            <div class="sec2div1">
+                <h1>Get to Know Us More</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but leap into electronic.</p>
+                <div class="sec2div2">
+                    <li><h1>1200</h1><br><p>Property <br> Built</p></li>
+                    <li><h1>50</h1><br><p>Award <br> Gained</p></li>
+                    <li><h1>20</h1><br><p>Years <br> Experienced</p></li>
+
+                    
+
+                </div>
+            </div>
+        </section>
+        <section class="sec3">
+            <div class="slider">
+                <h1>Popular Property <br>Right Now</h1>
+                <div class="button">
+                    <button onclick="prevSlide()" class="button1">&#60</button>
+                    <button onclick="nextSlide()" class="button2">></button> 
+                </div>
+            </div>
+            <div class="grid-container">
+                <div class="slide active" id="slide1">
+                    <div class="overlay top">
+                        <div>
+                        <h4>Nuc'Meal Home</h4><br>
+                        <h5>2312 Parkar Rd, New York</h5></div>
+                        <h4 class="price">$12000</h4>
+                    </div>
+                    <img src="./img/1.jpg" alt="Image 1" class="item item1">
+                    <div class="overlay topside ">
+                        <div>
+                            <h4>Graha Residence</h4><br>
+                            <h5>2312 Parkar Rd, New York</h5></div>
+                            <h4 class="price">$9000</h4>
+                    </div>
+                    <img src="./img/2.jpg" alt="Image 2" class="item">
+                    <div class="overlay bottomside">
+                        <div>
+                            <h4>Graha Residence</h4><br>
+                            <h5>2312 Parkar Rd, New York</h5></div>
+                            <h4 class="price">$9000</h4>
+                    </div>
+                    <img src="./img/3.jpg" alt="Image 3" class="item">
+                </div>
+                <div class="slide" id="slide2">
+                    <div class="overlay top">
+                        <div>
+                            <h4>Nuc'Meal Home</h4><br>
+                            <h5>2312 Parkar Rd, New York</h5></div>
+                            <h4 class="price">$12000</h4>
+                    </div>
+                    <img src="./img/4.jpg" alt="Image 4" class="item item1">
+                    <div class="overlay topside">
+                        <div>
+                            <h4>Graha Residence</h4><br>
+                            <h5>2312 Parkar Rd, New York</h5></div>
+                            <h4 class="price">$9000</h4>
+                    </div>
+                    <img src="./img/5.jpg" alt="Image 5" class="item">
+                    <div class="overlay bottomside">
+                        <div>
+                            <h4>Graha Residence</h4><br>
+                            <h5>2312 Parkar Rd, New York</h5></div>
+                            <h4 class="price">$9000</h4>
+                    </div>
+                    <img src="./img/6.jpg" alt="Image 6" class="item">
+                </div>
+            </div>
+        </section>
+        <h1 class="sec3head">We Build More<br>
+            Project Successfully</h1>
+            <section class="sec3">
+                <div class="my-slider-container">
+                    <div class="my-slider">
+                        <div class="my-slide">
+                            <img src="./img/a.jpg" alt="Image 1">
+                            <div class="my-text-overlay">
+                                <h2>Savior Residence</h2>
+                                <p>Temperley, Argentina</p>
+                            </div>
+                        </div>
+                        <div class="my-slide">
+                            <img src="./img/b.jpg" alt="Image 2">
+                            <div class="my-text-overlay">
+                                <h2>Golden Globe</h2>
+                                <p>Barcelona ,Spain</p>
+                            </div>
+                        </div>
+                        <div class="my-slide">
+                            <img src="./img/c.jpg" alt="Image 3">
+                            <div class="my-text-overlay">
+                                <h2>Cresent</h2>
+                                <p>New jersey ,USA </p>
+                            </div>
+                        </div>
+                        <div class="my-slide">
+                            <img src="./img/d.jpg" alt="Image 4">
+                            <div class="my-text-overlay">
+                                <h2>Colonial Heritage House</h2>
+                                <p>101 Historic Street, Old Town</p>
+                            </div>
+                        </div>
+                        <!-- Add more slides as needed -->
+                        <div class="my-slide">
+                            <img src="./img/e.jpg" alt="Image 5">
+                            <div class="my-text-overlay">
+                                <h2>Seaside Retreat</h2>
+                                <p>Ocean View Drive, Malibu</p>
+                            </div>
+                        </div>
+                        <div class="my-slide">
+                            <img src="./img/f.jpg" alt="Image 6">
+                            <div class="my-text-overlay">
+                                <h2>Skyhigh Luxury Suites</h2>
+                                <p> Altitude Avenue, Skyline District</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sec4">
+                <div class="sec4">
+                    
+                    <div id="gallery">
+                      <div class="person person4 centered" style="background-image: url('./img/img4.jpg'); " onclick="showPersonInfo('Ripon Ahmed', 'Temperley, Argentina', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book')"></div>
+                      <div class="person person1" style="background-image: url('./img/img1.jpg'); " onclick="showPersonInfo('Alice Johnson', ' Wonderland,France', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ')"></div>
+                      <div class="person person2" style="background-image: url('./img/img2.jpg'); " onclick="showPersonInfo('John Doe', ' New York City,US', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book')"></div>
+                      <div class="person person3" style="background-image: url('./img/img3.jpg'); " onclick="showPersonInfo('Robert Miller', 'UK', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book')"></div>
+                      <div class="person person5" style="background-image: url('./img/img5.jpg'); " onclick="showPersonInfo('Michael Brown', 'Sydney,Australia', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book')"></div>
+                      <div class="person person6" style="background-image: url('./img/img6.jpg');" onclick="showPersonInfo('Emily Smith', 'Tokyo,Japan', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book')"></div>
+                      <div class="person person7" style="background-image: url('./img/img7.jpg'); " onclick="showPersonInfo('Michael Brown', 'Sydney,Australia', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book')"></div>
+                      <div class="galleryhead"><h1>That's what our client says</h1></div>
+                      <div class="person-info" id="personInfo"></div>
+                    </div>
+                  </div>
+            </section>
+            <section class="sec5">
+                <div class="sec5div1">
+                    <h1>Join Our Newsletter</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus suscipit at autem <br>magni. Minus deleniti quod, maxime </p>
+                    <form action="#" method="post" id="subscriptionForm" >
+                        
+                        <input type="email" id="email" name="email" required placeholder="ahmedripon455@gmail.com">
+                
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </section>
+            <footer>
+                
+                <div class="footerdiv1">
+                    <h1>Dudeshape</h1>
+                    <p>+01647086161 <br>ahmedripon455@gmail.com <br>Sylhet, Bangladesh</p><br>
+                    <div class="icon">
+                       <a href=""> <i class='bx bxl-facebook' style='color:#ffffff'  ></i></a>
+                        <a><i class='bx bxl-instagram' style='color:#ffffff' ></i></a>
+                        <a href=""><i class='bx bxl-twitter' style='color:#ffffff' ></i></a>
+                </div>
+                </div>
+                <div>
+                    <li>Useful Link</li>
+                    <li>Property Type</li>
+                    <li>Recent Property</li>
+                    <li>Buy Property</li>
+                    <li>Sell Property</li>
+                    <li>Top Agents</li>
+                </div>
+                <div>
+                    <li>Community</li>
+                    <li>Events</li>
+                    <li>Blogs</li>
+                    <li>Best Deal</li>
+                    <li>Forum</li>
+                    <li>Invite Friend</li>
+                </div>
+                <div>
+                   <li>About Us</li>
+                   <li>About Us</li>
+                   <li>Partnarships</li>
+                   <li>FAQs</li>
+                </div>
+            </footer>
+    </main>
+</body>
+</html>
